@@ -26,6 +26,7 @@ public class TestSalaryCaculator {
         int award = salaryCaculator.getAward(5);
         assertThat(award, is(100));
     }
+<<<<<<< HEAD
 
     @Test
     public void workFor5DaysAwardTaxShouldbe5(){
@@ -33,4 +34,6 @@ public class TestSalaryCaculator {
         int tax = salaryCaculator.getAwardTax(5);
         assertThat(tax, is(5));
     }
+=======
+>>>>>>> origin/master
 }
