@@ -1,4 +1,3 @@
-
 public class SalaryCaculator {
     private int salaryPerDay = 200;
     private int salaryOfNoTax = 3500;
@@ -46,7 +45,7 @@ public class SalaryCaculator {
         int basicWage = getBasicWage(days);
         if(basicWage < salaryOfNoTax)
             return 0;
-                                                      else
-        return (int)((basicWage - salaryOfNoTax) * salaryTaxPart);
+        else
+            return (int)((basicWage - salaryOfNoTax) * salaryTaxPart);
     }
 }
