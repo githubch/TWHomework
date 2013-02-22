@@ -12,51 +12,56 @@ import static org.junit.Assert.assertThat;
 //6、工作30天的个人税收是（${30天的工资总额} - 3500）* 10% = 250元
 //7、工作30天收入总额为6320元
 public class TestSalaryCaculator {
+    @Before
+    public void setup(){
+        salaryCaculator = new SalaryCaculator(200, 3500, 0.1f, 0.1f, 0.05f);
+    }
+    
     @Test
     public void workFor5DaysWageShouldBe1000(){
-        SalaryCaculator salaryCaculator = new SalaryCaculator();
+        //SalaryCaculator salaryCaculator = new SalaryCaculator();
         int wage = salaryCaculator.getBasicWage(5);
         assertThat(wage, is(1000));
     }
 
     @Test
     public void workFor5DaysTheBasicWageTaxShoudeBe0(){
-        SalaryCaculator salaryCaculator = new SalaryCaculator();
+        //SalaryCaculator salaryCaculator = new SalaryCaculator();
         int wageTax = salaryCaculator.getBasicWageTax(5);
         assertThat(wageTax, is(0));
     }
 
     @Test
     public void workFor5DaysShouldAward100(){
-        SalaryCaculator salaryCaculator = new SalaryCaculator();
+        //SalaryCaculator salaryCaculator = new SalaryCaculator();
         int award = salaryCaculator.getAward(5);
         assertThat(award, is(100));
     }
 
     @Test
     public void workFor5DaysAwardTaxShouldbe5(){
-        SalaryCaculator salaryCaculator = new SalaryCaculator();
+        //SalaryCaculator salaryCaculator = new SalaryCaculator();
         int tax = salaryCaculator.getAwardTax(5);
         assertThat(tax, is(5));
     }
 
     @Test
     public void workFOr5DaysTotalIncomeShouldBe1095(){
-        SalaryCaculator salaryCaculator = new SalaryCaculator();
+        //SalaryCaculator salaryCaculator = new SalaryCaculator();
         int income = salaryCaculator.getTotalIncome(5);
         assertThat(income, is(1095));
     }
 
     @Test
     public void workFor30DaysTheBasicWageTaxShouldBe250(){
-        SalaryCaculator salaryCaculator = new SalaryCaculator();
+        //SalaryCaculator salaryCaculator = new SalaryCaculator();
         int baseWageTax = salaryCaculator.getBasicWageTax(30);
         assertThat(baseWageTax, is(250));
     }
 
     @Test
     public void workFor30DaysTheTotalIncomeShoubleBe6320(){
-        SalaryCaculator salaryCaculator = new SalaryCaculator();
+        //SalaryCaculator salaryCaculator = new SalaryCaculator();
         int income = salaryCaculator.getTotalIncome(30);
         assertThat(income, is(6320));
     }
