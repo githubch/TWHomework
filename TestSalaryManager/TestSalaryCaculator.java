@@ -12,6 +12,8 @@ import static org.junit.Assert.assertThat;
 //6、工作30天的个人税收是（${30天的工资总额} - 3500）* 10% = 250元
 //7、工作30天收入总额为6320元
 public class TestSalaryCaculator {
+    private SalaryCaculator salaryCaculator = null;
+    
     @Before
     public void setup(){
         salaryCaculator = new SalaryCaculator(200, 3500, 0.1f, 0.1f, 0.05f);
